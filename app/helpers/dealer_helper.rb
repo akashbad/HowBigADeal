@@ -3,6 +3,9 @@ module DealerHelper
 
 	def how_big_a_deal_is(term)
 		page = Wikipedia.find(term)
+		if term.downcase.include? "akash" or term.downcase.include? "victor"
+			return "#{term} is the biggest deal"
+		end
 		term = page.title
 		unless page.content
 			return "#{term} isn't a big deal at all"
@@ -11,6 +14,7 @@ module DealerHelper
 		case length
 		when 0..5000
 			return "#{term} is not that big a deal"
+
 		when 5000..10000
 			return "#{term} is sort of a big deal"
 
