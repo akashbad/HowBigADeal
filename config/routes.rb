@@ -1,11 +1,9 @@
 HowBigADeal::Application.routes.draw do
   
-  root to: 'dealer#home'
-  get "dealer/home"
+  root to: 'dealer#search'
 
   get "dealer/search"
 
-  match '/search', to: 'dealer#search'
   match '/:term', to: 'dealer#search'
 
   # The priority is based upon order of creation:
