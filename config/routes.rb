@@ -6,6 +6,7 @@ HowBigADeal::Application.routes.draw do
   get "dealer/search"
 
   match '/search', to: 'dealer#search'
+  match '/:term', to: 'dealer#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
