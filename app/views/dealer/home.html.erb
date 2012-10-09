@@ -1,1 +1,5 @@
-<h1>How Big a Deal is <h1>
+<h1>How Big a Deal Is <h1>
+<%= form_tag search_path, method: 'get' do %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search" %>
+<% end %>
