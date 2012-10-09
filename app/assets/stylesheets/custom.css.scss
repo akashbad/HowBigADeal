@@ -21,21 +21,18 @@ h1 {
 	height: 1.1em;
 	position: relative;
 	top: -6px;
-	font-family: Helvetica;
 	font-size: 30pt;
 	border-radius: 0px;
 
 	border-color: white white gray white;
 	border-style: dotted;
+	line-height: 1em;
+
+	width: 400px;
 
 }
 
 input:focus {
 	outline: none;
 	outline-width: none;
-}
-
-::-webkit-input-placeholder,
-input:-moz-placeholder { 
-	color: red; 
 }
