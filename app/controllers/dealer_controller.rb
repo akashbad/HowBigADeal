@@ -4,7 +4,7 @@ class DealerController < ApplicationController
 	end
 
 	def search
-		@result = how_big_a_deal_is params[:term]
+		@result, @term = how_big_a_deal_is params[:term]
 		# @result = "Hooray"
 	end
 end

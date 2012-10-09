@@ -30,6 +30,12 @@ h1 {
 
 }
 
-input#search-input:focus {
+input:focus {
 	outline: none;
+	outline-width: none;
+}
+
+::-webkit-input-placeholder,
+input:-moz-placeholder { 
+	color: red; 
 }
