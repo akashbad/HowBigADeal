@@ -8,9 +8,12 @@ module DealerHelper
 		end
 		term = page.title
 		unless page.content
-			return "#{term} isn't a big deal at all"
+			return "#{term} isn't even a deal"
 		end
 		length = page.content.length
+		if page.categories.to_s.downcase.include? "disambiguation"
+			return "#{term} might be a big deal, there are a lot of " +term.pluralize
+		end
 		case length
 		when 0..5000
 			return "#{term} is not that big a deal"
