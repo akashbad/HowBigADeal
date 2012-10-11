@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$('#search-form').live('ajax:success', function(evt, data, status, xhr){
+	$('#results').html(data);
+	console.log(status);
+});

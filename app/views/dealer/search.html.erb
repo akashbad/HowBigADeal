@@ -1,6 +1,9 @@
-<%= form_tag root_path, method: 'post', id: "search-form" do %>
+<%= form_tag root_path, method: 'post', remote: true, id: "search-form" do %>
 	<%= label_tag(:term, "howbigadeal.is/", class: "search-question") %>
 	<%= text_field_tag :term, params[:search], id: "search-input", placeholder: @term %>
 	<span class="search-question">?<span>
 <% end %>
-<h1><%= @result %> </h1>
+<div id="results"><%= render 'layouts/results.html.erb' %></div>
+
+
+
