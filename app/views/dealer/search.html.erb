@@ -3,7 +3,7 @@
 	<%= text_field_tag :term, params[:search], id: "search-input", placeholder: @term %>
 	<span class="search-question">?<span>
 <% end %>
-<div id="results"><%= render 'layouts/results.html.erb' %></div>
+<h1 id="results"><%= @result %></h1>
 
 
 

@@ -8,9 +8,12 @@ class DealerController < ApplicationController
 			@result = how_big_a_deal_is params[:term]
 		end
 		@term = params[:term]
+		data = []
+		data << @term
+		data << @result
 		respond_to do |format|
 			format.html
-			format.js {render partial: 'layouts/results', locals: {results: @results}, content_type: 'text/html' }
+			format.js {render json: data}
 		end
 	end
 end
