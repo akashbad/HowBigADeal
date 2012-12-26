@@ -2,7 +2,7 @@ module DealerHelper
 	require 'wikipedia'
 
 	def how_big_a_deal_is(term)
-		page = Wikipedia.find(term)
+		page = Wikipedia.find term, :redirects => true
 		if term.downcase.include? "akash" or term.downcase.include? "victor"
 			return "#{term} is the biggest deal"
 		end
