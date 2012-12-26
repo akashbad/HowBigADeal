@@ -10,7 +10,7 @@ module DealerHelper
 		unless page.content
 			return "#{term} isn't even a deal"
 		end
-		length = page.content.length
+		length = page.raw_data['query']['pages'][page.raw_data['query']['pages'].keys[0]]['revisions'][0]['*'].length
 		if page.categories.to_s.downcase.include? "disambiguation"
 			return "#{term} might be a big deal, there are a lot of " +term.pluralize
 		end
